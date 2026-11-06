@@ -1,0 +1,31 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "FAQ list of expandable question/answer rows with an Expand all control",
+    "description": "New variant (no existing accordion variants in project): Bordered rows with chevron toggles and an Expand all control Page background, centered intro, accordion list, two buttons below."
+  },
+  "contentPattern": {
+    "source": "/block-collection/accordion",
+    "columns": 2,
+    "rows": [
+      {
+        "row": "block name + variant"
+      },
+      {
+        "row": "one per item (repeat)",
+        "cells": [
+          "title (question)",
+          "content (rich answer)"
+        ]
+      }
+    ],
+    "structure": "one row per item: cell 1 question; cell 2 rich answer (paragraphs, lists, links)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "FAQ sections; buttons below the list are default content.",
+  "reuseGuidance": "Reuse for any FAQ or expandable list; the Expand all control appears when there are 2+ items.",
+  "sourceUrl": "https://adelaide.edu.au/"
+}

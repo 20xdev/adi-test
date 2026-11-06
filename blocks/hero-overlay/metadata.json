@@ -1,0 +1,36 @@
+{
+  "variantName": "hero-overlay",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Full-bleed dark-tinted photo with centered heading, paragraph and a single CTA",
+    "description": "New variant (no existing hero variants in project): Full-bleed dark-tinted photo with centered H2, paragraph and single CTA Full-bleed dark photo (city buildings) with centered overlay text. Photo background belongs to its hero; section not colored."
+  },
+  "contentPattern": {
+    "source": "/block-collection/hero",
+    "columns": 1,
+    "rows": [
+      {
+        "row": "block name + variant"
+      },
+      {
+        "row": "background image",
+        "cells": [
+          "image"
+        ]
+      },
+      {
+        "row": "content",
+        "cells": [
+          "heading, subheading, CTA links (contact variant: also H3 groups for side-by-side items)"
+        ]
+      }
+    ],
+    "structure": "row 1: background image; row 2: heading, paragraph(s), CTA link"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Mid-page brand statement over a photo.",
+  "reuseGuidance": "Use for centered text over a darkened photo. For left-aligned page-leading banners use hero-banner.",
+  "sourceUrl": "https://adelaide.edu.au/"
+}

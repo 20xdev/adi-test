@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "adi-test": {
+      "previewOrg": "20xdev",
+      "previewSite": "adi-test",
+      "contentHostUrl": "https://content.da.live/20xdev/adi-test/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

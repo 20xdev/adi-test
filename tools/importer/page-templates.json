@@ -1,0 +1,216 @@
+{
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://adelaide.edu.au/"
+      ],
+      "representativeUrl": "https://adelaide.edu.au/",
+      "description": "Adelaide University home page: hero, degree search, feature cards, FAQ, news, sign-up form and contact",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            ".herobanner.personalization-container",
+            ".herobanner.cmp-herobanner--full-bleed:not(.cmp-herobanner--overlay)"
+          ]
+        },
+        {
+          "name": "search-degree",
+          "instances": [
+            ".searchbar.cmp-home-search-title--center .cmp-fb--search form"
+          ]
+        },
+        {
+          "name": "hero-overlay",
+          "instances": [
+            ".herobanner.cmp-herobanner--overlay"
+          ]
+        },
+        {
+          "name": "cards-feature",
+          "instances": [
+            ".container.flex-columns-lrg--4.flex-columns-med--2"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".accordion.panelcontainer"
+          ]
+        },
+        {
+          "name": "columns-media-panel",
+          "instances": [
+            ".herobanner.cmp-herobanner--image-50percent"
+          ]
+        },
+        {
+          "name": "cards-news",
+          "instances": [
+            ".cmp-aucontainer--bg-tertiary .experiencefragment [class*=\"flex-columns-xsml\"]"
+          ]
+        },
+        {
+          "name": "form",
+          "instances": [
+            ".aemform .cmp-adaptiveform-container__wrapper > .panelcontainer"
+          ]
+        },
+        {
+          "name": "hero-contact",
+          "instances": [
+            ".cmp-experiencefragment--contact .container-has-bg"
+          ]
+        }
+      ],
+      "urlPattern": "/",
+      "sections": [
+        {
+          "id": "rc2",
+          "name": "Hero banner",
+          "selector": [
+            ".herobanner.personalization-container",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.herobanner.teaser.cmp-herobanner--image-background-no-gradient.cmp-herobanner--full-bleed.personalization-container.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Find your degree or career",
+          "selector": [
+            ".container.col-wrapper--pt-4.col-wrapper--pb-6",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.col-wrapper--pt-4.col-wrapper--pb-6.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "style": "centered",
+          "blocks": [
+            "search-degree"
+          ],
+          "defaultContent": [
+            ".cmp-searchbar--title--text"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "A university for the future",
+          "selector": [
+            ".herobanner.cmp-herobanner--overlay",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.herobanner.teaser.cmp-herobanner--overlay.cmp-herobanner--image-background-no-gradient.cmp-herobanner--centre.cmp-herobanner--full-bleed.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-overlay"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc5",
+          "name": "Four pillars",
+          "selector": [
+            ".container.flex-columns-lrg--4.flex-columns-med--2",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.flex-columns-med--2.flex-columns-lrg--4.flex-columns--flex-grow.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc6",
+          "name": "Ask Adelaide University",
+          "selector": [
+            ".container.col-wrapper--pt-3.col-wrapper--pb-5",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.col-wrapper--pt-3.col-wrapper--pb-5.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "style": "centered",
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            ".col-wrapper--pt-3.col-wrapper--pb-5 > .custom-container > .col-wrapper > .col > .column-content > .text",
+            ".col-wrapper--pt-3.col-wrapper--pb-5 .cmp-aucontainer--grid_col-2 .button"
+          ]
+        },
+        {
+          "id": "rc7",
+          "name": "Launch your new life in Adelaide",
+          "selector": [
+            ".container.col-wrapper--pb-6:has(.cmp-herobanner--image-50percent)",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.col-wrapper--pb-6.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(6)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-media-panel"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc8",
+          "name": "Whyalla - we are here for you",
+          "selector": [
+            ".container.cmp-aucontainer--bg-dark.col-wrapper--pr-4",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.cmp-aucontainer--bg-dark.col-wrapper--pt-4.col-wrapper--pr-4.col-wrapper--pb-4.col-wrapper--pl-4.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "style": "dark, centered",
+          "blocks": [],
+          "defaultContent": [
+            ".cmp-aucontainer--bg-dark.col-wrapper--pr-4 .cmp-text",
+            ".cmp-aucontainer--bg-dark.col-wrapper--pr-4 .button"
+          ]
+        },
+        {
+          "id": "rc9",
+          "name": "Latest news and events",
+          "selector": [
+            ".container.cmp-aucontainer--bg-tertiary",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.cmp-aucontainer--bg-tertiary.col-wrapper--pt-4.col-wrapper--pb-4.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "style": "cream",
+          "blocks": [
+            "cards-news"
+          ],
+          "defaultContent": [
+            ".cmp-aucontainer--bg-tertiary .text.cmp-text-centered",
+            ".cmp-aucontainer--bg-tertiary .cmp-aucontainer--grid_col-3 .button"
+          ]
+        },
+        {
+          "id": "rc10",
+          "name": "Stay in touch",
+          "selector": [
+            ".container.cmp-aucontainer--bg-grey",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.cmp-aucontainer--bg-grey.col-wrapper--pt-4.col-wrapper--pb-4.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "style": "centered",
+          "blocks": [
+            "form"
+          ],
+          "defaultContent": [
+            ".aemform .cmp-adaptiveform-container__wrapper > .text.base"
+          ]
+        },
+        {
+          "id": "rc11",
+          "name": "Contact us",
+          "selector": [
+            ".experiencefragment:has(.cmp-experiencefragment--contact)",
+            "body > div.root.container.responsivegrid > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > main.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container.row.col-wrapper.resp-grid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.experiencefragment.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-contact"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}

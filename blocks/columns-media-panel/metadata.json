@@ -1,0 +1,31 @@
+{
+  "variantName": "columns-media-panel",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Coloured text panel (heading, paragraph, CTA) beside a photo, 50/50",
+    "description": "New variant (no existing columns variants in project): Dark-blue text panel beside a photo on a cream graphic backdrop (50/50) Page background; the block itself has a cream panel with purple graphic, a dark-blue text panel on the left and a photo on the right."
+  },
+  "contentPattern": {
+    "source": "/block-collection/columns",
+    "columns": 2,
+    "rows": [
+      {
+        "row": "block name + variant"
+      },
+      {
+        "row": "content row",
+        "cells": [
+          "text: heading, paragraph, CTA",
+          "image"
+        ]
+      }
+    ],
+    "structure": "one row: cell 1 heading, paragraph, CTA link; cell 2 image (cells may be swapped to put the image first)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Promotional panel such as \"Launch your new life in Adelaide\".",
+  "reuseGuidance": "Reuse for any two-column text-plus-photo promo panel.",
+  "sourceUrl": "https://adelaide.edu.au/"
+}

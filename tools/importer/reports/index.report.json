@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://adelaide.edu.au/",
+  "path": "index",
+  "timestamp": "2026-10-29T18:42:13.124Z",
+  "title": "Adelaide University – South Australia's university for the future",
+  "template": "home",
+  "blocks": [
+    "hero-banner",
+    "hero-banner",
+    "search-degree",
+    "hero-overlay",
+    "cards-feature",
+    "accordion-faq",
+    "columns-media-panel",
+    "cards-news",
+    "form",
+    "hero-contact"
+  ]
+}

@@ -1,0 +1,184 @@
+/* cards-news: values from adelaide.edu.au
+   .cmp-aucontainer--bg-tertiary .experiencefragment .flex-columns-xsml--1.flex-columns-sml--2.flex-columns-med--3 */
+
+/* .col-wrapper--pt-2 / --pb-2: 32px above and below the cards */
+.cards-news {
+  padding: var(--spacing-m) 0;
+}
+
+/* .column-content: wrapping flex row, 16px gap, cards grow to fill the row
+   (an odd last card spans the full row while 2-up) */
+.cards-news > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--spacing-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* .cmp-teaser--bg-white .teaser-wrapper: white, flat, image above text */
+.cards-news > ul > li {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  min-width: 0;
+  background-color: var(--brand-white);
+  color: var(--text-color);
+}
+
+/* .cmp-teaser__image: always on top (teaser-wrapper column-reverse) */
+.cards-news .cards-news-card-image {
+  order: -1;
+  line-height: 0;
+}
+
+.cards-news .cards-news-card-image p {
+  margin: 0;
+}
+
+/* .cmp-image__image: fixed 288px crop at every width */
+.cards-news .cards-news-card-image img {
+  display: block;
+  width: 100%;
+  height: 288px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* .cmp-teaser__content */
+.cards-news .cards-news-card-body {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--spacing-s);
+  padding: var(--spacing-m) var(--spacing-s);
+}
+
+.cards-news .cards-news-card-body > * {
+  margin: 0;
+}
+
+/* .cmp-teaser__pretitle */
+.cards-news .cards-news-card-date {
+  align-self: flex-start;
+  padding: var(--spacing-xxs);
+  background-color: #6956cc;
+  color: var(--brand-white);
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: var(--subheading-font-weight);
+  line-height: 24px;
+}
+
+/* .cmp-teaser__title */
+.cards-news h3 {
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: var(--subheading-font-weight);
+  line-height: var(--heading-line-height-l);
+}
+
+/* .cmp-teaser__description (no clamping on the source) */
+.cards-news .cards-news-card-description {
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: var(--body-line-height);
+  overflow-wrap: anywhere;
+}
+
+.cards-news .cards-news-card-description p {
+  margin: var(--spacing-xs) 0;
+}
+
+.cards-news .cards-news-card-description > :first-child {
+  margin-top: 0;
+}
+
+.cards-news .cards-news-card-description > :last-child {
+  margin-bottom: 0;
+}
+
+.cards-news .cards-news-card-description a:any-link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+/* .cmp-teaser__action-container: pinned to the card bottom, stacked (full-width
+   button) below 992px */
+.cards-news .cards-news-card-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+/* .cmp-teaser__action-link: solid blue button */
+main .cards-news .cards-news-card-cta a:any-link {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xxs);
+  min-width: 170px;
+  margin: 0;
+  padding: var(--button-padding);
+  border: none;
+  border-radius: var(--button-radius);
+  background-color: var(--brand-blue);
+  color: var(--brand-white);
+  font-family: var(--heading-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--subheading-font-weight);
+  line-height: var(--button-line-height);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+main .cards-news .cards-news-card-cta a:any-link:hover,
+main .cards-news .cards-news-card-cta a:any-link:focus-visible,
+main .cards-news .cards-news-card-cta a:any-link:active {
+  background-color: var(--brand-blue-dark);
+  color: var(--brand-white);
+  text-decoration: none;
+}
+
+main .cards-news .cards-news-card-cta a:any-link:focus-visible {
+  outline: 2px solid var(--focus-ring-color);
+  outline-offset: 4px;
+}
+
+/* flex-columns-sml--2 */
+@media (width >= 576px) {
+  .cards-news > ul > li {
+    flex-basis: calc(50% - 8px);
+  }
+}
+
+/* flex-columns-med--3; teaser content padding steps up */
+@media (width >= 768px) {
+  /* source cards wrap 2 + 1 until each card fits its 234px min-content (170px
+     button + 64px padding) inside a 40px-gutter row, i.e. 3-up from a 814px
+     viewport */
+  .cards-news > ul > li {
+    flex-basis: calc(33.3333% - 10.6667px);
+    min-width: 234px;
+  }
+
+  .cards-news .cards-news-card-body {
+    padding: 40px var(--spacing-m);
+  }
+}
+
+/* action container becomes a row: button shrinks to its 170px min width */
+@media (width >= 992px) {
+  .cards-news .cards-news-card-cta {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,101 @@
+/* accordion-faq: values from source .accordion.panelcontainer computed styles */
+.accordion-faq {
+  color: var(--text-color);
+  text-align: left;
+}
+
+/* source hides the expand-all control (.cmp-accordion-actn-container__unchecked) */
+.accordion-faq .accordion-faq-controls {
+  display: none;
+}
+
+.accordion-faq .accordion-faq-toggle-all {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: var(--subheading-font-weight);
+  line-height: 24px;
+  cursor: pointer;
+}
+
+/* question row (.cmp-accordion__button) */
+.accordion-faq .accordion-faq-item-label {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 56px 16px 0;
+  border-bottom: 1px solid #a9b5bd;
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-size: 21px;
+  font-weight: var(--subheading-font-weight);
+  line-height: 24px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.accordion-faq .accordion-faq-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-faq .accordion-faq-item-label > p {
+  margin: 0;
+  font: inherit;
+}
+
+/* chevron (.cmp-accordion__icon): 16px, right 8px, vertically centred, #1448ff */
+.accordion-faq .accordion-faq-item-label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  margin: auto 0;
+  background-color: var(--brand-blue);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 16'%3E%3Cpath d='M8.51784 13.1237C8.19677 13.1237 7.91137 13.0167 7.69732 12.8027L0.847826 5.95318C0.384058 5.52508 0.384058 4.77592 0.847826 4.34783C1.27592 3.88406 2.02508 3.88406 2.45318 4.34783L8.51784 10.3768L14.5468 4.34783C14.9749 3.88406 15.7241 3.88406 16.1522 4.34783C16.6159 4.77592 16.6159 5.52508 16.1522 5.95318L9.30268 12.8027C9.08863 13.0167 8.80323 13.1237 8.51784 13.1237Z'/%3E%3C/svg%3E") no-repeat 0 0 / 17px 16px;
+}
+
+.accordion-faq .accordion-faq-item[open] > .accordion-faq-item-label::after {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 16'%3E%3Cpath d='M15.3673 12.1237C15.0463 12.1237 14.7609 12.0167 14.5468 11.8027L8.51784 5.77369L2.45318 11.8027C2.02508 12.2664 1.27592 12.2664 0.847826 11.8027C0.384058 11.3746 0.384058 10.6254 0.847826 10.1973L7.69732 3.34783C8.12542 2.88406 8.87458 2.88406 9.30268 3.34783L16.1522 10.1973C16.6159 10.6254 16.6159 11.3746 16.1522 11.8027C15.9381 12.0167 15.6527 12.1237 15.3673 12.1237Z'/%3E%3C/svg%3E");
+}
+
+/* answer panel: paragraphs 16px 0 margins, no panel padding */
+.accordion-faq .accordion-faq-item-body {
+  padding: 16px 0;
+}
+
+.accordion-faq .accordion-faq-item-body p {
+  margin: 16px 0;
+}
+
+.accordion-faq .accordion-faq-item-body > :first-child {
+  margin-top: 0;
+}
+
+.accordion-faq .accordion-faq-item-body > :last-child {
+  margin-bottom: 0;
+}
+
+.accordion-faq .accordion-faq-item-body a:any-link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+/* source column: 70% of the content width, max 987px, centred */
+@media (width >= 768px) {
+  .accordion-faq {
+    width: 70%;
+    max-width: 987px;
+    margin: 0 auto;
+  }
+}

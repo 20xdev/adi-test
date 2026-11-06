@@ -1,0 +1,161 @@
+/* columns-media-panel: values from adelaide.edu.au
+   .herobanner.cmp-herobanner--image-50percent.cmp-herobanner--dark computed styles.
+   Source breakpoints: 768px (spacing, type, CTA width), 992px (50/50 grid), 1400px (padding). */
+
+/* mobile/tablet: photo on top, navy text panel below (source: column-reverse) */
+.columns-media-panel .columns-media-panel-row {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-color);
+}
+
+.columns-media-panel .columns-media-panel-media {
+  order: -1;
+  line-height: 0;
+}
+
+.columns-media-panel .columns-media-panel-media picture {
+  display: block;
+}
+
+.columns-media-panel .columns-media-panel-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+.columns-media-panel .columns-media-panel-text {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px var(--spacing-s);
+  background-color: var(--dark-color);
+  color: var(--brand-white);
+}
+
+/* source: empty 24px title-container gap above the title */
+.columns-media-panel .columns-media-panel-text h2 {
+  margin: var(--spacing-s) 0 0;
+  color: inherit;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-xxl);
+}
+
+/* source: 16px x 2px accent rule between title and description */
+.columns-media-panel .columns-media-panel-text h2::after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 0;
+  margin-top: var(--spacing-xs);
+  border-bottom: 2px solid #836bff;
+}
+
+.columns-media-panel .columns-media-panel-text p {
+  margin: var(--spacing-xs) 0 0;
+  color: inherit;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+.columns-media-panel .columns-media-panel-text > :first-child:not(h2) {
+  margin-top: 0;
+}
+
+.columns-media-panel .columns-media-panel-text a:any-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.columns-media-panel .columns-media-panel-text a:focus-visible {
+  outline-color: var(--brand-white);
+}
+
+/* CTA: last paragraph holding a single link; 40px gap above (source actions gap) */
+.columns-media-panel .columns-media-panel-text > p:last-child:has(> a:only-child) {
+  display: flex;
+  margin-top: 40px;
+}
+
+.columns-media-panel .columns-media-panel-text > p:last-child > a:only-child:any-link {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xxs);
+  border: 0;
+  border-radius: var(--button-radius);
+  padding: var(--button-padding);
+  background-color: var(--accent-color);
+  color: var(--brand-white);
+  font-family: var(--heading-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--subheading-font-weight);
+  line-height: var(--button-line-height);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+.columns-media-panel .columns-media-panel-text > p:last-child > a:only-child:any-link:hover,
+.columns-media-panel .columns-media-panel-text > p:last-child > a:only-child:any-link:focus-visible {
+  background-color: var(--accent-hover-color);
+  color: var(--brand-white);
+  text-decoration: none;
+}
+
+@media (width >= 768px) {
+  .columns-media-panel .columns-media-panel-text {
+    padding: 56px 40px;
+  }
+
+  .columns-media-panel .columns-media-panel-text h2 {
+    font-size: var(--heading-font-size-xl);
+    line-height: var(--heading-line-height-xl);
+  }
+
+  /* source: 16px right padding on content and actions */
+  .columns-media-panel .columns-media-panel-text > * {
+    padding-right: var(--spacing-xs);
+  }
+
+  /* CTA sizes to its label */
+  .columns-media-panel .columns-media-panel-text > p:last-child > a:only-child:any-link {
+    flex: 0 0 auto;
+  }
+}
+
+/* desktop: 50/50 grid, photo fills the row height */
+@media (width >= 992px) {
+  .columns-media-panel .columns-media-panel-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .columns-media-panel .columns-media-panel-media {
+    position: relative;
+    order: 0;
+    min-height: 100%;
+  }
+
+  .columns-media-panel .columns-media-panel-media picture,
+  .columns-media-panel .columns-media-panel-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (width >= 1400px) {
+  .columns-media-panel .columns-media-panel-text {
+    padding: 56px;
+  }
+}

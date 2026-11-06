@@ -1,0 +1,36 @@
+{
+  "variantName": "hero-contact",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Full-bleed photo with centered H2 and contact options side by side, separated by a vertical rule",
+    "description": "New variant (no existing hero variants in project): Full-bleed photo with centered H2 and two centered contact items side by side split by a vertical rule Full-bleed dark architectural photo background (bkgd-1920x1080-contact-2.jpg) with centered H2 and two contact options side by side separated by a vertical rule. Photo background belongs to its hero; section not colored."
+  },
+  "contentPattern": {
+    "source": "/block-collection/hero",
+    "columns": 1,
+    "rows": [
+      {
+        "row": "block name + variant"
+      },
+      {
+        "row": "background image",
+        "cells": [
+          "image"
+        ]
+      },
+      {
+        "row": "content",
+        "cells": [
+          "heading, subheading, CTA links (contact variant: also H3 groups for side-by-side items)"
+        ]
+      }
+    ],
+    "structure": "row 1: background image; row 2: H2 intro, then one H3 per contact item followed by its text, buttons or phone links"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Contact us band near the page end.",
+  "reuseGuidance": "Reuse for side-by-side contact/action groups over a photo. Each H3 starts a new item.",
+  "sourceUrl": "https://adelaide.edu.au/"
+}

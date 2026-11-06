@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Feature/pillar cards with a small line icon, heading, short text and arrow link; 4 across on desktop",
+    "description": "New variant (no existing cards variants in project): White elevated cards with small line icon on top, H3, text and arrow link; 4 across Page background; four white cards with line icons, overlapping the hero above."
+  },
+  "contentPattern": {
+    "source": "/block-collection/cards",
+    "columns": 2,
+    "rows": [
+      {
+        "row": "block name + variant"
+      },
+      {
+        "row": "one per card (repeat)",
+        "cells": [
+          "image or icon",
+          "text: optional date/eyebrow, heading, description, CTA link"
+        ]
+      }
+    ],
+    "structure": "one row per card: cell 1 icon image (optional); cell 2 H3, short text, trailing link paragraph as CTA"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Four pillars / key features grid.",
+  "reuseGuidance": "Reuse for icon-led feature grids. For photo-led news/event cards use cards-news.",
+  "sourceUrl": "https://adelaide.edu.au/"
+}

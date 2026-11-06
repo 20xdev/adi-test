@@ -1,0 +1,203 @@
+/* hero-contact: values from adelaide.edu.au
+   .cmp-experiencefragment--contact .container-has-bg computed styles.
+   Source breakpoints: 768px (2 columns, padding, type), 1200px (intro width, CTA gap),
+   1400px (side padding). */
+
+/* full-bleed up to the 1440px content width: release the section gutter */
+main .section > .hero-contact-wrapper {
+  padding: 0;
+}
+
+.hero-contact {
+  position: relative;
+  box-sizing: border-box;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 40px var(--spacing-s);
+  background-color: var(--dark-color);
+  color: var(--brand-white);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* source background image: cover, anchored top-left, pre-darkened (no tint) */
+.hero-contact .hero-contact-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-contact .hero-contact-media picture,
+.hero-contact .hero-contact-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-contact .hero-contact-media img {
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.hero-contact .hero-contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-contact.no-image {
+  color: var(--brand-white);
+}
+
+/* intro: centered H2, 80px to the contact items (24px title margin + empty line + gaps) */
+.hero-contact .hero-contact-intro {
+  margin: 0 auto var(--spacing-xxl);
+}
+
+.hero-contact .hero-contact-intro h2 {
+  margin: 0;
+  color: inherit;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height-xl);
+}
+
+.hero-contact .hero-contact-intro p {
+  margin: var(--spacing-xs) 0 0;
+}
+
+/* contact items: stacked on mobile, 16px apart */
+.hero-contact .hero-contact-items {
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
+.hero-contact .hero-contact-item {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: var(--spacing-m) var(--spacing-s);
+}
+
+.hero-contact .hero-contact-item h3 {
+  margin: 0 0 var(--spacing-s);
+  color: inherit;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: var(--subheading-font-weight);
+  line-height: var(--heading-line-height-l);
+}
+
+.hero-contact .hero-contact-item p {
+  margin: 0;
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+/* source: a blank line separates each label + phone number group */
+.hero-contact .hero-contact-item p:has(> a[href^="tel:"]) + p:not(:has(> a)) {
+  margin-top: var(--spacing-s);
+}
+
+.hero-contact a:focus-visible {
+  outline-color: var(--brand-white);
+}
+
+/* tel / inline links: white, underlined, no colour change on hover */
+.hero-contact .hero-contact-item a:any-link,
+.hero-contact .hero-contact-item a:hover {
+  color: var(--brand-white);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* CTA: 24px gap + 12px action margin below 1200px */
+.hero-contact .hero-contact-item p.hero-contact-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.hero-contact .hero-contact-item h3 + p.hero-contact-action {
+  margin-top: 12px;
+}
+
+/* CTA on dark: white outline, light-blue on hover, 170px min content width */
+main .hero-contact .hero-contact-item p.hero-contact-action a:any-link {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xxs);
+  min-width: 170px;
+  margin: 0;
+  border: var(--button-border-width) solid var(--brand-white);
+  border-radius: var(--button-radius);
+  padding: var(--button-padding);
+  background-color: transparent;
+  color: var(--brand-white);
+  font-family: var(--heading-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--subheading-font-weight);
+  line-height: var(--button-line-height);
+  text-align: center;
+  text-decoration: none;
+  transition: var(--button-transition);
+}
+
+main .hero-contact .hero-contact-item p.hero-contact-action a:any-link:hover,
+main .hero-contact .hero-contact-item p.hero-contact-action a:any-link:focus-visible {
+  border-color: var(--brand-blue-light);
+  background-color: transparent;
+  color: var(--brand-blue-light);
+  text-decoration: none;
+}
+
+/* tablet (source breakpoint 768px): items side by side, split by a 50% white rule */
+@media (width >= 768px) {
+  .hero-contact {
+    padding: var(--spacing-xl) 40px;
+  }
+
+  .hero-contact .hero-contact-intro {
+    max-width: 70%;
+  }
+
+  .hero-contact .hero-contact-items {
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+  }
+
+  .hero-contact .hero-contact-item {
+    padding: 40px var(--spacing-m);
+  }
+
+  .hero-contact .hero-contact-item:not(:last-child) {
+    border-right: 1px solid rgb(255 255 255 / 50%);
+  }
+}
+
+@media (width >= 992px) {
+  .hero-contact .hero-contact-intro {
+    max-width: 60%;
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-contact .hero-contact-intro {
+    max-width: 50%;
+  }
+
+  .hero-contact .hero-contact-item p.hero-contact-action {
+    margin-top: var(--spacing-s);
+  }
+
+  .hero-contact .hero-contact-item h3 + p.hero-contact-action {
+    margin-top: 0;
+  }
+}
+
+@media (width >= 1400px) {
+  .hero-contact {
+    padding: var(--spacing-xl) 56px;
+  }
+}

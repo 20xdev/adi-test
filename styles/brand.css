@@ -1,0 +1,118 @@
+/*
+ * Adelaide University brand tokens
+ * Extracted from https://adelaide.edu.au/ computed styles
+ */
+
+:root {
+  /* brand palette */
+  --brand-navy: #140f50;
+  --brand-blue: #1448ff;
+  --brand-blue-dark: #0c2b99;
+  --brand-blue-light: #436dff;
+  --brand-blue-tint: #f3f6ff;
+  --brand-cream: #f9f2e6;
+  --brand-white: #fff;
+  --brand-off-white: #fafafb;
+
+  /* colors */
+  --background-color: var(--brand-off-white);
+  --light-color: var(--brand-cream);
+  --dark-color: var(--brand-navy);
+  --text-color: var(--brand-navy);
+  --link-color: var(--brand-blue);
+  --link-hover-color: var(--brand-blue);
+  --accent-color: var(--brand-blue);
+  --accent-hover-color: var(--brand-blue-dark);
+  --surface-color: var(--brand-white);
+  --focus-ring-color: var(--brand-navy);
+  --border-color: #586167;
+
+  /* fonts */
+  --body-font-family: 'Roboto Serif', roboto-serif-fallback, georgia, serif;
+  --heading-font-family: 'Barlow Condensed', barlow-condensed-fallback, 'Arial Narrow', sans-serif;
+  --heading-font-weight: 700;
+  --subheading-font-weight: 500;
+
+  /* body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+  --body-line-height: 24px;
+
+  /* heading sizes (mobile, < 768px) */
+  --heading-font-size-xxl: 40px;
+  --heading-font-size-xl: 34px;
+  --heading-font-size-l: 28px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 21px;
+  --heading-font-size-xs: 20px;
+  --heading-line-height-xxl: 42px;
+  --heading-line-height-xl: 32px;
+  --heading-line-height-l: 32px;
+  --heading-line-height-m: 28px;
+  --heading-line-height-s: 24px;
+  --heading-line-height-xs: 24px;
+
+  /* spacing scale (source col-wrapper--p*-N utilities) */
+  --spacing-xxs: 8px;
+  --spacing-xs: 16px;
+  --spacing-s: 24px;
+  --spacing-m: 32px;
+  --spacing-l: 48px;
+  --spacing-xl: 64px;
+  --spacing-xxl: 80px;
+  --spacing-xxxl: 96px;
+
+  /* layout */
+  --content-max-width: 1440px;
+  --section-gutter: 24px;
+  --section-padding-top: 40px;
+  --section-padding-bottom: 40px;
+  --section-padding-panel: 40px;
+
+  /* buttons */
+  --button-radius: 4px;
+  --button-padding: 16px;
+  --button-border-width: 2px;
+  --button-font-size: 18px;
+  --button-line-height: 24px;
+  --button-transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+
+  /* nav height (source header bar; desktop utility bar adds 64px) */
+  --nav-height: 80px;
+}
+
+@media (width >= 768px) {
+  :root {
+    /* heading sizes (desktop) */
+    --heading-font-size-xxl: 58px;
+    --heading-font-size-xl: 48px;
+    --heading-font-size-l: 32px;
+    --heading-font-size-m: 28px;
+    --heading-font-size-s: 24px;
+    --heading-font-size-xs: 21px;
+    --heading-line-height-xxl: 62px;
+    --heading-line-height-xl: 52px;
+    --heading-line-height-l: 36px;
+    --heading-line-height-m: 32px;
+    --heading-line-height-s: 28px;
+    --heading-line-height-xs: 24px;
+
+    /* source container gutter */
+    --section-gutter: 40px;
+  }
+}
+
+@media (width >= 900px) {
+  :root {
+    --section-padding-top: 64px;
+    --section-padding-bottom: 64px;
+    --section-padding-panel: 64px;
+  }
+}
+
+@media (width >= 1400px) {
+  :root {
+    --section-gutter: 56px;
+  }
+}

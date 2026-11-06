@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "News/event cards with photo, date tag, H3 title, excerpt and Read More button; 3 across on desktop",
+    "description": "New variant (no existing cards variants in project): Photo-top cards with date tag, H3, excerpt and Read More button; 3 across Cream (#f9f2e6) band; centered intro, three news cards, centered \"View all news\" button."
+  },
+  "contentPattern": {
+    "source": "/block-collection/cards",
+    "columns": 2,
+    "rows": [
+      {
+        "row": "block name + variant"
+      },
+      {
+        "row": "one per card (repeat)",
+        "cells": [
+          "image or icon",
+          "text: optional date/eyebrow, heading, description, CTA link"
+        ]
+      }
+    ],
+    "structure": "one row per card: cell 1 image; cell 2 date paragraph (before the heading), H3 title, excerpt, trailing Read More link paragraph"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Latest news and events listings; the intro and \"View all news\" button are default content.",
+  "reuseGuidance": "Reuse for dated article/event teasers. For icon-led feature cards use cards-feature.",
+  "sourceUrl": "https://adelaide.edu.au/"
+}

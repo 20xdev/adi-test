@@ -1,0 +1,30 @@
+{
+  "variantName": "search-degree",
+  "baseBlock": "search",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Degree/career finder search box with inline Search button",
+    "description": "New variant (no existing search variants in project): Single wide text input with inline Search button, centered under heading Page background, centered heading above a wide search input with Search button."
+  },
+  "contentPattern": {
+    "source": "/block-collection/search",
+    "columns": 1,
+    "rows": [
+      {
+        "row": "block name + variant"
+      },
+      {
+        "row": "search target",
+        "cells": [
+          "URL of the search/results endpoint (source form submits to the degree finder)"
+        ]
+      }
+    ],
+    "structure": "link to the results page (an empty query parameter such as ?query= sets the parameter name, default q); optional plain-text row for the placeholder (e.g. \"e.g. Business\"); optional \"Button: <label>\" row"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Place under a default-content heading such as \"Find your degree or career\".",
+  "reuseGuidance": "Reuse for any single-field site or course search that redirects to a results page.",
+  "sourceUrl": "https://adelaide.edu.au/"
+}

@@ -1,0 +1,36 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Homepage lead banner: full-bleed photo with left-aligned H1, tagline and CTA buttons",
+    "description": "New variant (no existing hero variants in project): Full-bleed photo, left-aligned H1, tagline and two filled CTAs, brand graphic accent Full-bleed photo background (student portrait) with brand graphic; text left. Visual tree marks it colored because of the herobanner paint, but the photo background belongs to the hero block, so the section is not styled."
+  },
+  "contentPattern": {
+    "source": "/block-collection/hero",
+    "columns": 1,
+    "rows": [
+      {
+        "row": "block name + variant"
+      },
+      {
+        "row": "background image",
+        "cells": [
+          "image"
+        ]
+      },
+      {
+        "row": "content",
+        "cells": [
+          "heading, subheading, CTA links (contact variant: also H3 groups for side-by-side items)"
+        ]
+      }
+    ],
+    "structure": "row 1: background image; row 2: H1, tagline paragraph, CTA links (each link in its own paragraph; consecutive link paragraphs are grouped into a button row)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Top-of-page hero with a photo background and primary calls to action.",
+  "reuseGuidance": "Use for any page-leading photo banner with left-aligned text. For centered text over a dark photo use hero-overlay; for contact options use hero-contact.",
+  "sourceUrl": "https://adelaide.edu.au/"
+}

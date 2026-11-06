@@ -1,0 +1,30 @@
+{
+  "variantName": "form",
+  "baseBlock": "form",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Simple sign-up form such as the \"Stay in touch\" newsletter form",
+    "description": "Forms keep the name form; generate with forms-excat:excat-form-block-handler (skill not available in this session) Page background; centered heading/intro then a sign-up form (first/last name, email, select, opt-in checkbox, reCAPTCHA, Submit)."
+  },
+  "contentPattern": {
+    "source": "forms handler (not in library)",
+    "note": "Forms keep the name form; build via forms-excat:excat-form-block-handler",
+    "rows": [
+      {
+        "row": "block name"
+      },
+      {
+        "row": "form definition/source link",
+        "cells": [
+          "form reference"
+        ]
+      }
+    ],
+    "structure": "one row per field: Label | Type (text, email, tel, number, date, textarea, select, checkbox, submit) | Placeholder or options (select: comma- or line-separated) | Required (yes); config rows with Type \"action\" (submission URL in cell 3) and \"success\" (message in cell 1). Alternatively a single link to a spreadsheet JSON with columns Label, Name, Type, Placeholder, Options, Mandatory"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Newsletter / register-your-interest sign-up. reCAPTCHA from the source is not reproduced.",
+  "reuseGuidance": "Reuse for short lead-capture forms that POST JSON to an endpoint. For complex adaptive forms use a dedicated forms solution.",
+  "sourceUrl": "https://adelaide.edu.au/"
+}

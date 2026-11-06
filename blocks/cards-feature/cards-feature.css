@@ -1,0 +1,124 @@
+/* cards-feature: values from adelaide.edu.au .container.flex-columns-lrg--4.flex-columns-med--2 */
+
+/*
+ * Source overlap: the cards sit 75px over the bottom band of the hero-overlay
+ * photo above (.custom-container margin-top -75px at every width). The adjoining
+ * section margins collapse with this negative margin, so cancel the section
+ * margin and add the source overlap.
+ */
+main .section.hero-overlay-container + .section > .cards-feature-wrapper:first-child {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(-75px - var(--section-padding-top));
+}
+
+/* .column-content: 16px gap, rows stretch to equal card height */
+.cards-feature > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* .cmp-teaser--bg-white-elevated + .cmp-teaser__content */
+.cards-feature > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  padding: var(--spacing-m) var(--spacing-s);
+  background-color: var(--brand-white);
+  box-shadow: rgb(233 236 238) 0 8px 16px 0;
+  color: var(--text-color);
+}
+
+.cards-feature .cards-feature-card-icon {
+  line-height: 0;
+}
+
+.cards-feature .cards-feature-card-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.cards-feature .cards-feature-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.cards-feature .cards-feature-card-body > * {
+  margin: 0;
+}
+
+.cards-feature h3 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: var(--subheading-font-weight);
+  line-height: var(--heading-line-height-l);
+}
+
+.cards-feature p {
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+/* .cmp-teaser__action-container / tertiary .cmp-teaser__action-link */
+.cards-feature .cards-feature-card-cta {
+  display: flex;
+}
+
+/* source is a flex row (text, 8px gap, chevron); inline layout keeps the chevron
+   right after the last word when the substitute font wraps the label */
+.cards-feature .cards-feature-card-cta a:any-link {
+  display: inline-block;
+  padding: var(--spacing-xs) 0 var(--spacing-xxs);
+  border: var(--button-border-width) solid transparent;
+  border-radius: var(--button-radius);
+  color: var(--brand-blue);
+  font-family: var(--heading-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--subheading-font-weight);
+  line-height: var(--button-line-height);
+  text-decoration: none;
+  transition: var(--button-transition);
+}
+
+/* JS wraps the last word in a nowrap span so the chevron never wraps alone */
+.cards-feature .cards-feature-card-cta-end {
+  white-space: nowrap;
+}
+
+/* chevron-right.svg (10x16) as a 16px masked box so it follows the link color */
+.cards-feature .cards-feature-card-cta-end::after {
+  content: '';
+  display: inline-block;
+  margin-left: var(--spacing-xxs);
+  vertical-align: -2px;
+  width: 16px;
+  height: 16px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='16' viewBox='0 0 10 16'%3E%3Cpath d='M1.1703 16C.848688 16 .562814 15.8928.348409 15.6784-.116136 15.2496-.116136 14.4992.348409 14.0704L6.38749 7.99553.348409 1.95645C-.116136 1.52764-.116136.777219.348409.348409.777219-.116136 1.52764-.116136 1.95645.348409L8.81742 7.20938C9.28197 7.63819 9.28197 8.38861 8.81742 8.81742L1.95645 15.6784C1.74204 15.8928 1.45617 16 1.1703 16Z'/%3E%3C/svg%3E") 0 0 / auto no-repeat;
+}
+
+.cards-feature .cards-feature-card-cta a:hover,
+.cards-feature .cards-feature-card-cta a:focus-visible {
+  color: var(--brand-blue-dark);
+}
+
+@media (width >= 768px) {
+  .cards-feature > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-feature > ul > li {
+    padding: 40px var(--spacing-m);
+  }
+}
+
+@media (width >= 1200px) {
+  .cards-feature > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
