@@ -2,10 +2,10 @@
   "type": "da",
   "sites": {
     "adi-test": {
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json",
       "previewOrg": "20xdev",
       "previewSite": "adi-test",
-      "contentHostUrl": "https://content.da.live/20xdev/adi-test/",
-      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+      "contentHostUrl": "https://content.da.live/20xdev/adi-test/"
     }
   }
 }
